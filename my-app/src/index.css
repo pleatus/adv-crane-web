@@ -1,0 +1,408 @@
+body {
+  background-image: url(./imgs/AdvanceCraneLogoSVG-Plain.svg);
+  background-repeat:repeat-x;
+  background-position: center;
+  background-blend-mode:luminosity;
+  background-size:27rem;
+  background-color: rgba(36,36,36,1);
+  margin: 0;
+  font-size: x-large !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 15%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+div.overlay-open {
+  padding: 2rem;
+  width: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.resp-menu-lines {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/*header and header nav styling*/
+nav.main-menu { 
+  color:white;
+  font-family: 'Play', sans-serif;
+}
+
+div#header-container {
+  color:white;
+  text-align:center;
+  width: 100%;
+  background-color:#198754;
+  min-height:4rem;
+  margin-top:-1rem;
+  padding-top:2rem;
+  padding-bottom:1rem;
+}
+
+div#header-container>nav>ul {
+  display:inline-block;
+  margin-left: 14%;
+  margin-right: 18%;
+}
+
+nav.main-menu>ul>li {
+  font-weight: bolder;
+  display:inline-block;
+  margin: 0 1rem 0 1rem;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+nav.main-menu>ul>li a:link {
+  text-decoration: none;
+  color:white;
+}
+
+div#header-container ul li a:visited {
+  color:white !important;
+}
+
+div#header-container ul li a:hover, div#footer-container ul li a:hover {
+  color:white !important;
+}
+
+a.overlay-open {
+  color:white !important;
+  text-decoration: none;
+}
+
+svg.header-logo {
+  max-height:4rem;
+  max-width:4rem;
+  position:relative;
+  left:.6rem;
+}
+
+h1#site-identity, p.mobile-site-identity, p.mobile-menu-identity {
+  font-family: "Play", sans-serif;
+  font-weight:bolder;
+  display:inline-block;
+  background-color: white;
+  border-radius: 18rem;
+  text-shadow: 1px 1px 1px #000000;
+  padding: .5rem 1.3rem .5rem .1rem;
+}
+
+.mobile-site-identity, .mobile-menu-identity {
+  color:#198754;
+}
+
+.mobile-menu-identity {
+  font-size: 1rem;
+}
+
+h1#site-identity a:link,h1#site-identity a:visited {
+  text-decoration: none;
+  color:#198754 !important;
+  text-shadow: 1px 1px 1px black !important;
+}
+
+h1#site-identity a:hover, h1#site-identity a:active {
+  text-shadow: 2px 2px 1px #363636 !important;
+}
+
+/*home page styling*/
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.carousel-item a, .service-icon-container a {
+  text-decoration: none;
+}
+
+.carousel-caption {
+  border-radius:3rem;
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+}
+
+article.main-page-content {
+  background:#181818;
+}
+
+article h1, article h2, article h3, article h4, article p, article ul, article label {
+  font-weight: bold;
+  color:white;
+  text-shadow: 2px 2px 2px #363636;
+}
+
+article h1, article h2, article h3, article h4 {
+  font-family: 'Play', sans-serif;
+}
+
+article p, article ul {
+  font-family: 'Roboto', sans-serif;
+}
+
+article hr {
+  color:rgb(144,144,144);
+}
+
+img.slider-img {
+  max-height: 33rem;
+}
+
+h3.slider-text, p.slider-text {
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
+p.slider-text {
+  font-size: medium;
+}
+
+button.btn {
+  max-width: 80%;
+  padding: 2rem 5rem;
+  font-size: x-large !important;
+  font-family: 'Play', sans-serif;
+}
+
+a:link, a:visited {
+  color:lightgreen !important;
+  text-shadow:1px 1px 1px black;
+}
+
+a:hover, a:active {
+  color:lightgreen !important;
+  text-shadow: 2px 2px 1px #363636;
+}
+
+/*div.page-content {
+  width:60%;
+  margin:auto;
+  padding:2.7rem;
+}*/
+
+article {
+  padding:2rem;
+  padding-bottom:2rem;
+}
+
+/*div.page-content {
+  border: 6px solid #363636;
+  border-radius: 3rem;
+}*/
+
+div.page-content h1 {
+  text-align: center;
+}
+
+div.page-content hr.page-subheading {
+  width:50%;
+}
+
+div.advance-crane-social-media img {
+  margin-right:1rem;
+  max-width:3rem;
+  display:inline-block;
+}
+
+div.service-icon-container {
+  padding-top:1rem;
+  text-align: center;
+  background-color: lightgray;
+}
+
+div.service-img-container:hover {
+  background-color: #198754;
+}
+
+img.services-icon {
+  padding: 1rem;
+  max-height:8rem;
+}
+
+div.app-info {
+  border-radius: 3rem;
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+  text-align: center;
+}
+
+div.app-info p,div.app-info h4 {
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+div.advance-crane-about div.main-text p {
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
+div.advance-crane-safety div.main-text {
+  color:black;
+}
+
+div.advance-crane-safety div.row, div.advance-crane-about div.row, div.advance-crane-services div.row {
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+  padding-top:2rem;
+  padding-bottom:2rem;
+  margin-bottom:5rem;
+  color:black;
+  border: 3px solid black;
+  border-radius:3rem;
+}
+
+div.advance-crane-services div.row:nth-child(even) {
+  background-image: linear-gradient(rgba(255,255,255,.8),rgba(19,87,54,1), rgba(19,87,54,1));;
+  border: 3px solid grey;
+}
+
+div.advance-crane-services div.row:nth-child(even) h2, div.advance-crane-services div.row:nth-child(even) p, ul.advance-crane-partners li {
+  color:white;
+  text-shadow: 2px 2px 2px black;
+}
+
+div.advance-crane-services div.main-text {
+  padding-top:2rem;
+}
+
+div.splash-image img {
+  border-radius: 3em;
+  border: 4px solid #363636;
+}
+
+/*footer styling*/
+div#footer-container {
+  width: 100%;
+  text-align: center;
+  background: black;
+  padding-top:1rem;
+}
+
+div.footer-certifications img {
+  margin: 0 1rem 0 1rem;
+  max-width:5rem;
+  display:inline-block !important;
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+}
+
+button.top-button {
+  font-size: small;
+  margin-top:1rem;
+  padding: 1rem 1rem;
+  background-color: red;
+}
+p.copy-info {
+  color:white;
+  font-size: .8rem;
+}
+
+div.address-and-contact p {
+  color:white;
+  text-shadow: 1px 1px 1px #363636;
+  font-size: .8rem;
+  margin-bottom: -.3rem;
+}
+
+div.address-and-contact p>a:link, div.address-and-contact p>a:visited, div.address-and-contact p>a:hover, div.address-and-contact p>a:active {
+  color:aqua;
+}
+
+div.service-button {
+  text-align: center;
+}
+
+/*contact page styles*/
+span.form-required {
+  color:red;
+}
+
+button.contact-submit {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.app-contact-button {
+  margin-bottom:2rem;
+}
+
+@media screen and (min-width:900px) {
+  .overlay-content, .overlay-open {
+    display:none;
+  }  
+}
+
+@media screen and (max-width:899px) {
+  #header-nav {
+    display:none;
+  }
+  #footer-nav, .address-and-contact {
+    position: relative;
+    padding-top:1rem;
+    left:-1rem;
+  }
+  .advance-crane-social-media {
+    position: relative;
+    left:-.3rem;
+  }
+}
