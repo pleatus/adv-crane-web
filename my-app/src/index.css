@@ -285,7 +285,7 @@ img.services-icon {
 
 div.app-info {
   border-radius: 3rem;
-  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(19,87,54,1));
   text-align: center;
 }
 
@@ -303,7 +303,7 @@ div.advance-crane-safety div.main-text {
 }
 
 div.advance-crane-safety div.row, div.advance-crane-about div.row, div.advance-crane-services div.row {
-  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(255,255,255,.8));
+  background-image: linear-gradient(rgba(19,87,54,1), rgba(19,87,54,1), rgba(19,87,54,1));
   padding-top:2rem;
   padding-bottom:2rem;
   margin-bottom:5rem;
@@ -313,7 +313,7 @@ div.advance-crane-safety div.row, div.advance-crane-about div.row, div.advance-c
 }
 
 div.advance-crane-services div.row:nth-child(even) {
-  background-image: linear-gradient(rgba(255,255,255,.8),rgba(19,87,54,1), rgba(19,87,54,1));;
+  background-image: linear-gradient(rgba(19,87,54,1),rgba(19,87,54,1), rgba(19,87,54,1));;
   border: 3px solid grey;
 }
 

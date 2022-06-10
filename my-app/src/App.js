@@ -44,8 +44,13 @@ class App extends Component {
           <div className='resp-menu-lines'></div>
         </div>
         <nav id="header-nav" className="main-menu">
-          <h1 id="site-identity"><Link to="/"><AdvLogo/>Advance Crane LTD</Link></h1>
+							<div>
+
+							</div>
               <ul>
+								<li>
+									<Link to="/"><div className="p-3" style={{borderRadius:'2rem', backgroundColor:'#000000'}}><AdvLogo/>Advance Crane LTD</div></Link>
+								</li>
                 <li>
                   <Link to="/about">About</Link>
                 </li>
