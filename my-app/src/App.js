@@ -141,7 +141,9 @@ function setNavLocation (newLocation) {
   navLocation = newLocation;
   console.log('location is set to' + navLocation);
 }
- 
+
+
+// Thanks ray!
 function scrollToTop() {
   window.scrollTo({
     top: 0,
