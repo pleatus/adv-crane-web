@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+/*const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+const nodemailer = require('nodemailer');
+const cors = require('cors')({origin: true});
+admin.initializeApp();*/
 /*import Server from '../../../server.js';*/
 
 const ContactForm = () => {
