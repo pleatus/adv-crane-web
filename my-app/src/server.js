@@ -13,7 +13,7 @@ const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: "rayjaworski@gmail.com",
-      pass: "picardalpha3",
+      pass: "vteoyaancmsijodi",
     },
   });
   
@@ -25,16 +25,23 @@ const contactEmail = nodemailer.createTransport({
     }
   });
 
-  router.post("/contact", (req, res) => {
+  router.post("/emailsend", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const message = req.body.message; 
+    const company = req.body.company;
+    const phone = req.body.phone;
+    const select = req.body.select;
+    const message = req.body.message;
     const mail = {
       from: name,
       to: "rayjaworski@gmail.com",
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
+             <p>Company: ${company}</p>
+             <p>Phone: ${phone}</p>
+             <p>Reason for contact: ${select}</p>
+             <p>Message:</p>
              <p>${message}</p>`,
     };
     contactEmail.sendMail(mail, (error) => {

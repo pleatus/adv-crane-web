@@ -17,10 +17,13 @@ const ContactForm = () => {
     let details = {
       name: name.value,
       email: email.value,
-      message: 'Customer name: ' + name.value + '\n From: ' + company.value + '\n Phone: ' + phone.value + '\n Email: ' + email.value + '\n Reason for Contact: ' + select.value + '\n Message: ' + contactMessage.value,
+      company: company.value,
+      phone: phone.value,
+      select: select.value,
+      message: contactMessage.value,
     };
     console.log(details.message);
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:5000/emailsend", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -34,7 +37,7 @@ const ContactForm = () => {
 
   return (
     <div className='contact-form'>
-      <h1>Contact New Test Form Branchgit </h1>
+      <h1>Contact Advance Crane LTD</h1>
       <hr/>
       <Form onSubmit={handleSubmit}>
         <div className='row'>
